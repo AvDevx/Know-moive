@@ -36,10 +36,10 @@
 	<div class="container section">	
         <div class="col-sm-4"><img class="image" src="<?php echo 'http://img.omdbapi.com/?i=' . $movie_array['imdbID'].'&apikey=bf31b54b&t=' . $movie_array['Title'] ?>" /></div>
         <div class="col-sm-8">
-            <h4> Rating:        </h4> <p><?Php echo $movie_array['imdbRating'] ?></p>                   </br>
+            <h4> Rating:        </h4> <p><?Php echo $movie_array['imdbRating'] ?></p>              </br>
             <h4> Released year: </h4> <p><?Php echo $movie_array['Year'] ?></p>                    </br>
-            <h4> Genre:         </h4> <p><?Php echo $movie_array['Genre'] ?></p>                    </br>
-            <h4> Production:    </h4> <p><?Php echo $movie_array['Production'] ?></p>                    </br>
+            <h4> Genre:         </h4> <p><?Php echo $movie_array['Genre'] ?></p>                   </br>
+            <h4> Production:    </h4> <p><?Php echo $movie_array['Production'] ?></p>              </br>
             <h4> Plot:          </h4> <p><?Php echo $movie_array['Plot'] ?></p>                    </br>
         </div> 
 	</div>
