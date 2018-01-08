@@ -1,16 +1,17 @@
 <?php
+    //in case the movie array is empty
     if(empty($movie_array['Title']))
     {
       $movie_array['Title']='Search me,I can tell you about any movie!';
       $movie_array['Plot']=$movie_array['Production']=$movie_array['Genre']=$movie_array['imdbRating']=$movie_array['Year']=' ';
     }
-
+    //in case if its not then fetching the data and assigning it to an array
    if(!empty($_GET['movie'])){
       $movie_url = 'http://www.omdbapi.com/?i=tt3896198&apikey=bf31b54b&t=' . urlencode($_GET['movie']);
       $movie_json = file_get_contents($movie_url);
 	    $movie_array = json_decode($movie_json, true);
     }
-
+    //in case the response is false
     if($movie_array['Response']=='False')
     {
       $movie_array['Title']='Sorry no match! Try again';
